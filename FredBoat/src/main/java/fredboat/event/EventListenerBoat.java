@@ -217,7 +217,7 @@ public class EventListenerBoat extends AbstractEventListener {
                 && player.getPlayingTrack() != null
                 && joinedChannel.getMembers().contains(guild.getSelfMember())
                 && player.getHumanUsersInCurrentVC().size() > 0
-                && EntityReader.getEntity(guild.getId(), GuildConfig.class).isAutoResume()
+                && EntityReader.getOrCreateEntity(guild.getId(), GuildConfig.class).isAutoResume()
                 ) {
             CentralMessaging.sendMessage(player.getActiveTextChannel(), I18n.get(guild).getString("eventAutoResumed"));
             player.setPause(false);
