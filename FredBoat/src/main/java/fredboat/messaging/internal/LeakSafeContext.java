@@ -55,7 +55,7 @@ public class LeakSafeContext extends Context {
 
     @Override
     public TextChannel getTextChannel() {
-        return FredBoat.getTextChannelById(Long.toString(channelId));
+        return FredBoat.getTextChannelById(channelId);
     }
 
     @Override
